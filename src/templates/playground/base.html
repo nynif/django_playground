@@ -1,0 +1,25 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+</head>
+<header>
+	<span> PLAYGROUND </span>
+	<a href="/home">home</a>
+	<a href="/team">team</a>
+	<a href="/blog">blog</a>
+</header>
+
+<body>
+{% block content %}{% endblock content %}
+</body>
+
+<footer>
+	<h1> FOOTER </h1>
+</footer>
+</html>
