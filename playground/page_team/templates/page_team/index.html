@@ -1,2 +1,8 @@
 <h2> Let me introduce you to the TEAM </h2>
-<p>Lorem ipsum</p>
+<p>Lorem ipsum o</p>
+
+{% for people in list_people %}
+	<li><a href="{% url 'page_team:detail' people.id %}">{{ people }}</a></li>
+{% endfor %}
+
+
