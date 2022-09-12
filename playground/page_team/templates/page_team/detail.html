@@ -1,3 +1,5 @@
+{% extends "playground/base.html" %}
+{% block content %}
 
 <div>
 	<li>{{people.id}}</li>
@@ -8,3 +10,5 @@
 
 {% load static %}
 <img height="100px" src="{% static img_url %}">
+
+{% endblock content %}
