@@ -1,7 +1,28 @@
 {% extends "playground/base.html" %}
 {% block content %}
 
-{% load static %}
-<img height="100px" src="{% static 'page_home/img/zebra.jpg' %}" alt="My image">
+	{% load static %}
+	<link href="{% static 'page_home/css/style.css' %}" rel="stylesheet" />
+
+	<img height="100px" src="{% static 'page_home/img/zebra.jpg' %}" alt="My image">
+
+	{% for n in mylist %}
+		<div class="{% cycle 'num_1' 'num_2' %}">
+			<p>{{n}}</p>
+		</div>
+		{% empty %}
+			<h2>List vide</h2>
+	{% endfor %}
+
+	<p>
+		<h2>La list contient {{mylist|length }} élément{{ mylist|pluralize:"s" }}.</h2>
+	</p>
+
+	<p>{% lorem 3 w random %}</p>
+	<p>{% lorem 1 p %}</p>
+
+	{% with my_style="style_2 style_3 style_4"%}
+		<p class="{{my_style}}">{% now 'l d F Y'%}</p>
+	{% endwith %}
 
 {% endblock content %}
