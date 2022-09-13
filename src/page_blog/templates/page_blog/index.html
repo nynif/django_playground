@@ -3,7 +3,15 @@
 <h2> BLOG </h2>
 
 {% load static %}
-<img height="100px" src="{% static 'img/chat.jpg' %}" alt="My image">
-<img height="100px" src="{% static 'page_home/img/zebra.jpg' %}" alt="My image">
+<div  class="bg-indigo-300">
+	<img class='object-cover h-48 w-full' src="{% static 'img/chat.jpg' %}" alt="My image">
+</div>
+<div class="h-screen w-full">
+	<div class='bg-fixed bg-cover h-80' style="background-image: url('{% static 'page_home/img/zebra.jpg' %}')"> </div>
+</div>
+
+{% lorem 10 p random %}
+
 
 {% endblock content %}
+

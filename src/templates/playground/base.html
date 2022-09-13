@@ -1,11 +1,13 @@
 {% load static %}
+{% load static tailwind_tags %}
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Django playground</title>
+  {% tailwind_css %}
   <link href="{% static 'css/style.css' %}" rel="stylesheet" />
 </head>
 <header>
